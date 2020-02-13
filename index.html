@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="asset/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <title>Poker Nights</title>
+</head>
+<body>
+    <div id="deck" class="deck">
+        <img src="img/deck/56.png" alt="Deck background">
+    </div>
+    <div id="tableShown" class="tableShown"></div>
+    <div id="pot" class="pot">The Pot: <p data-pot>0</p> </div>
+    <div id="userHand" class="userHand" data-user-me></div>
+    
+    <div id="ui" class="ui">
+        <button id="btnCheck" class="button">Check</button>
+        <button id="btnFold" class="button">Fold</button>
+        <button id="btnRaise" class="button">Raise</button>
+    </div>
+</body>
+</html>
