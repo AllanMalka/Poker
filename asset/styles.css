@@ -128,3 +128,13 @@ body {
     transform: translate(-50%);
     color:#fff;
 }
+
+ul {
+    height: 50vh;
+    width: 20vw;
+    background: rgba(193,193,193,0.5);
+    color: #409234;
+}
+.own {
+    color: #0e2ca0;
+}

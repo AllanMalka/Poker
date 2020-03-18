@@ -1,7 +1,7 @@
 {
     "name": "poker-nights",
     "version": "0.0.1",
-    "main": "js/chat.js",
+    "main": "js/server.js",
     "description": "poker game, with socket.io, php, and javascript",
     "dependencies": {
         "socket.io": "*",

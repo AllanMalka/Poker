@@ -1,16 +1,19 @@
-const express = require('express');
-const app = express();
-const server = require('http').createServer(app)
-const io = require('socket.io').listen(server);
+// var socket = io('http://localhost:3000');
+var socket = io('http://localhost:3000/tables');
 
-server.listen(process.env.PORT || 3000);
-console.log("Server running...");
-
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/header.html');
+socket.on('welcome', message => {
+    console.log('%c%s', 'color: #00a3cc', message);
 });
 
-io.on('connection', (socket) => {
-    console.log("user connected");
-    socket.emit("welcome", "Salute my friend");
+socket.on('chat message', msg => {
+    $('#chatMsg').append(`<li>${msg}</li>`);
 })
+
+$('form').submit(function (e) {
+    e.preventDefault();
+    const msg = $('#m');
+    socket.emit('chat message', msg.val());
+    $('#chatMsg').append(`<li class="own">${msg.val()}</li>`);
+    msg.val('');
+});
+
